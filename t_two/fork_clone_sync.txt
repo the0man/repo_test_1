@@ -1,0 +1,57 @@
+Before you can sync a fork with an upstream repository, you must configure a 
+remote that points to the upstream repository in Git.
+
+Open a terminal in your local git repository and issue the remote -v command.
+This will list the current configured remote repository for the fork.
+
+origin https://github.com/username/fork.git (fetch)
+origin https://github.com/username/fork.git (push)
+
+In the local clone of the forked repository, specify a new remote upstream 
+repository that will be synced with the fork. (This new remote upstream 
+repository is the orininal repository that was forked.)
+
+git remote add upstream https://github.com/original_owner/original_repository.git
+
+Verify the new upstream remote repository by:
+git remote -v
+
+origin https://github.com/username/fork.git (fetch)
+origin https://github.com/username/fork.git (push)
+upstream https://github.com/original_owner/original_repository.git (fetch)
+upstream https://github.com/original_owner/original_repository.git (push)
+
+To continue with the sync process, open a terminal.
+Change working directory to your local project.
+Fetch the branches and their respective commits from the upstream repository.
+Commits to 'master' will be stored in a local branch,'upstream/master'.
+
+git fetch upstream
+
+remote: Counting objects: xx, done.
+remote: Compressing objects: 100% done.
+remote: Total 
+Unpacking objects:
+From  --- upstream original code
+
+Check out your local clone of your forks master branch
+
+git checkout master
+Switched to branch 'master'
+
+Merge the changes from 'upstream/master' into your local 'master' branch. This
+brings your local clone of your forks 'master' branch into sync with the 
+upstream (original) repository, without losing your local changes.
+
+Syncing only upstes the local clone of the fork.  To update the fork on 
+Github you must push your changes.
+
+
+
+
+
+
+
+
+
+
