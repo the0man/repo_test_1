@@ -3,5 +3,7 @@ Add another line to this document, line two (2).
 
 Once a repository is established, then it can be forked.
 After the repository is forked, then it can be cloned to a local machine.
-The local machine is used to upate the forked file on github.
+The local machine is used to update the forked file on github.
 
+The repository was established, forked, and cloned.  Now to update the
+clone copy of the fork and generate a pull request.
